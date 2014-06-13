@@ -19,7 +19,7 @@ En el dispositivo móvil debes tener instalada la applicación correspondiente a
 
  bundle install
 
-* Cambia la ip por la tuya
+* Cambia la ip por la tuya en el link del archivo /app/views/barcodes/index.html.erb
 
 * Inicia el servidor
 
