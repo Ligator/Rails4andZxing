@@ -1,0 +1,25 @@
+<h1>Barcodes</h1>
+
+<%= link_to 'Scan Barcode', "zxing://scan/?ret=http%3A%2F%2F192.168.1.74:3000%2Fbarcodes%2Fnew%2F%7BCODE%7D%2F%7BFORMAT%7D", class: "button" %>
+</br>
+</br>
+
+<table>
+  <tr>
+    <th> Code </th>
+    <th> Format </th>
+    <th> Device </th>
+    <th> Location </th>
+  </tr>
+
+
+  <% @barcodes.each do |barcode| %>
+  <tr>
+      <td> <%= barcode.code %> </td>
+      <td> <%= barcode.format %> </td>
+      <td> <%= barcode.device %> </td>
+      <td> <%= barcode.location %> </td>
+  </tr>
+  <% end %>
+</table>
+
