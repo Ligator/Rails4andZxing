@@ -1,14 +1,15 @@
-<h1>Rails4andZxing. Barcode Scanner</h1>
+<h1>Rails4andZxing</h1>
+<h2>Barcode Scanner</h2>
 
 IP: <%= ip_address = Socket.ip_address_list.find { |ai| ai.ipv4? && !ai.ipv4_loopback? }.ip_address %>:<%= port =request.port.to_s %>
 </br></br>
 
 <%#= link_to 'Click here from your Android browser to Scan Barcode', "zxing://scan/?ret=http%3A%2F%2F192.168.1.74:3000%2Fbarcodes%2Fnew%2F%7BCODE%7D%2F%7BFORMAT%7D", class: "button" %>
-<%= link_to 'Click here from your Android browser to Scan Barcode', "zxing://scan/?ret=http%3A%2F%2F" + ip_address + ":"+port+"%2Fbarcodes%2Fnew%2F%7BCODE%7D%2F%7BFORMAT%7D", class: "button" %>
-</br>
 You need have already installed the <%= link_to 'Barcode App', 'https://play.google.com/store/apps/details?id=com.google.zxing.client.android&hl=es_419' %>
 </br>
 <%= link_to 'Fork me!', 'https://github.com/Ligator/Rails4andZxing' %>
+</br></br></br></br>
+<%= link_to 'Click here from your Android browser to Scan Barcode', "zxing://scan/?ret=http%3A%2F%2F" + ip_address + ":"+port+"%2Fbarcodes%2Fnew%2F%7BCODE%7D%2F%7BFORMAT%7D", class: "button" %>
 </br></br>
 
 <table>
