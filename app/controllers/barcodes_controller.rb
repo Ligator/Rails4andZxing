@@ -4,8 +4,9 @@ class BarcodesController < ApplicationController
   end
 
   def new
+    # ip_address = Socket.ip_address_list.find { |ai| ai.ipv4? && !ai.ipv4_loopback? }.ip_address
   	@barcode = Barcode.new(barcode_params)
-	@barcode.save
+    @barcode.save
     redirect_to :action => :index
   end
 

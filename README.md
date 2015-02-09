@@ -11,16 +11,29 @@ En terminales iOS se debe tener previamente abierta la app y no funciona del tod
 Este proyecto fue escrito con Ruby 2.0.0 y Rails 4.1.0.
 En el dispositivo móvil debes tener instalada la applicación correspondiente a tu dispositivo.
 
-* Copia el proyecto
+* Clona el proyecto:
 
- git clone git://github.com/Ligator/Rails4andZxing.git
- 
-* Intala las gemas necesarias
+```
+$ git clone git://github.com/Ligator/Rails4andZxing.git
+```
 
- bundle install
+* Intala las gemas necesarias:
 
-* Cambia la ip por la tuya en el link del archivo /app/views/barcodes/index.html.erb
+```
+$ bundle install
+```
 
-* Inicia el servidor
+* Crea la base de datos:
 
- rails s
+```
+$ rake db:migrate
+```
+
+* Inicia el servidor:
+
+```
+$ rails s
+```
+
+* Desde tu dispositivo móvil entra a la dirección que te señala la aplicación, por ejemplo: `192.168.1.253:3000` y da clic link señalado para comenzar a escanear códigos de barras.
+
